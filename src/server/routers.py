@@ -18,4 +18,4 @@ async def redirect_endpoint(code: str, user_id: int, request: fastapi.Request):
             "code": code
         }
     )
-    print(access_token_info)
+    return access_token_info.json()
