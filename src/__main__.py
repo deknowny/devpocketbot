@@ -1,13 +1,11 @@
 import uvicorn
-import fastapi
+
+import src.server.app
+import src.config
 
 
-app = fastapi.FastAPI()
-
-
-@app.get("/redirect-endpoint")
-async def redirect_endpoint(code: str):
-    print(code)
-
-
-uvicorn.run(app, host="185.119.58.249", port=9000)
+uvicorn.run(
+    src.server.app.app,
+    host=src.config.SERVER_IP,
+    port=src.config.SERVER_PORT
+)

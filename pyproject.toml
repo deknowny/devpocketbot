@@ -8,6 +8,8 @@ authors = ["deknowny <deknowny@gmail.com>"]
 python = "^3.9"
 fastapi = "^0.65.2"
 uvicorn = "^0.14.0"
+python-dotenv = "^0.17.1"
+requests = "^2.25.1"
 
 [tool.poetry.dev-dependencies]
 
